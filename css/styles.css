@@ -124,12 +124,12 @@ grid-item > button:last-child {
     transition: all 0.5s;
 }
 
-#prova:hover {
+#all-articles:hover {
     background: lightblue;
     color: white;
 }
  
-#prova > a:hover {
+#all-articles > a:hover {
     color: white;
 }
 
