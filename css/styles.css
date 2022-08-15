@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title > a, grid-item a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header a {
+    color: inherit;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: 30px; */
+    gap: 2em;
+}
+
+ol > li{
+    list-style-type: none;
+}
+
+#slogan{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* text-align: center; */
+    
+    height: 40vh;
+    
+
+    background-image: url(../img/tux.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    text-transform: uppercase;
+    /* font-size: 75px; */
+    font-size: 4em;
+    color: aquamarine;
+    -webkit-text-stroke: 0.5px black;
+    
+
+    /* animation */
+    animation-name: colors;
+    animation-duration: 0.7s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+div article {
+    padding: 5px;
+    border: 5px groove aquamarine;
+    
+    
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5px;
+    margin-top: 5px;
+
+    background: rgb(18, 24, 26);
+    
+}
+
+/* Not use top margin on first article at the right */
+grid-item > article:first-child {
+    margin-top: 0;
+}
+
+/* Use top margin for all other articles */
+grid-item > article {
+    margin-top: 5px;
+}
+
+grid-item > article:last-child {
+    width: fit-content;
+    float: right;
+
+    
+    background: rgb(59, 171, 199);
+    border-radius: 15px;
+
+    transition: all 0.5s;
+}
+
+/* #all-articles > a {
+    transition: all 0.5s;
+} */
+
+grid-item > button:last-child {
+    display: block;
+    width: fit-content;
+    background: rgb(59, 171, 199);
+    float: right;
+    color: white;
+    border: 5px groove aquamarine;
+
+    font-size: 1.5em;
+
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+#prova:hover {
+    background: lightblue;
+    color: white;
+}
+ 
+#prova > a:hover {
+    color: white;
+}
+
+
+
+@keyframes colors {
+    0% {
+        color: aquamarine;
+    }
+
+    50% {
+        color: lightgreen;
+    }
+
+    100% {
+        color: lightblue
+    }
+}
